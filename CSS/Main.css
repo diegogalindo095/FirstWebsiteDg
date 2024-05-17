@@ -1,0 +1,277 @@
+/* -----------GLOBAL SETTINGS------------- */
+* {
+    font-family: Arial, Helvetica, sans-serif; 
+
+  }
+  :root {
+    --blue:#4d4a77;
+    --white:#ffff;
+    --black:#000000be;
+    --darkorange:#ffb326be; 
+    --lightorange: rgba(162, 161, 161, 0.992);
+    --deeporange: rgb(255, 150, 4);
+    --size20: 40px;
+    --formsizeF: 25px;
+}
+.content {
+    display: none;
+  }
+  
+  .content.active {
+    display: block;
+  }
+  
+
+
+  .mainBox{
+      display: grid;
+      grid-template-columns: auto; 
+      grid-template-rows: repeat(4,auto)
+      
+  }
+
+  /* --------------HEADER-LOGO STYLE-------------------*/
+  .headerBox{ 
+      
+      display: grid; 
+      background-color:  var(--white);
+      padding: var(--size20); 
+      text-align: center; 
+      grid-row: 1;
+  
+  }
+  .imagen{
+    margin-right: auto;
+    margin-left: auto;
+    width: 800px;
+    }
+
+  
+/* ----------------MAIN CONTENT STYLE------------------- */
+.box2{
+    grid-row: 3;
+    display: flex;
+    flex-direction: row;
+    grid-template-rows: 60% 40%;
+}
+
+.picturesBox{ 
+    background-color: rgb(236, 230, 222); 
+    text-align: center; 
+    flex: 0 0 60%;
+    border: 2px solid var(--white);
+    border-radius: 50px;
+}
+.welcome{
+    font-size: var(--size20);
+  }
+  .slogan{
+    font-size: var(--size20);
+    font-weight: bold;
+    color: var(--deeporange);
+  }
+  .images {
+    width: 400px; /* Cambia este valor según el tamaño deseado */
+    height: auto; /* Esto mantiene la proporción de la imagen */
+    border-radius: 80px;
+    border: 2px solid var(--blue);
+  }
+  .titles{
+    font-size: var(--size20);
+    text-decoration: underline;
+    font-style: italic;
+  }
+/*----------- MENU STYLE---------*/
+
+ /* Menu style */
+ .menu{
+    display: flex;
+  }
+    
+    .menu-item {
+      display: flex;
+      padding: 10px var(--size20);
+      margin-right: 10px;
+      color: #000;
+      text-decoration: none;
+      border-radius: 15px;
+      transition: background-color 0.3s;
+      align-items: start;
+      flex-direction: row;
+      font-size: var(--size20);
+      font-weight: 700;
+      
+    }
+    
+    .menu-item:hover {
+      background-color: var(--deeporange);
+      color: #fff;
+    }
+
+  /* search box container style*/
+  .search-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    flex-grow: 1;
+  }
+
+  .searchBox{ 
+      display: grid; 
+      background-color: var(--lightorange); 
+      padding: var(--size20); 
+      text-align: center; 
+      grid-row: 2;
+      border: 2px solid var(--white);
+      border-radius: 20px;
+  }
+ /*  text input style */
+    
+ .search-input {
+    flex-grow: 1;
+    display: flex;
+    padding: 8px;
+    font-size: var(--size20);
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    flex-grow: 1; 
+    margin-right: auto;
+    margin-left: auto;
+    position: absolute;
+    right:7%;
+}
+/* search button style */
+.search-button {
+    display: inline-block;
+    padding: 10px  var(--size20);
+    background-color: var(--deeporange);
+    font-size: var(--size20);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: var();
+    cursor: pointer;
+    margin-right: auto;
+    margin-left: auto;
+    position: absolute;
+    right: 1%;
+    transition: background-color 0.3s;
+      }
+      
+    .search-button:hover {
+        background-color: var(--darkorange);
+        color: #fff;
+
+  }
+  
+  /* -------------Aside STYLE "PURCHASE STYLE" -------------------*/
+  .purchaseBox{ 
+     
+      background-color:var(--lightorange);       
+      text-align: center; 
+      flex: 0 0 40%;
+      }
+      .purchaseBox{
+        font-size: var(--size20);
+      }
+      .asideTable{
+        width: 80%;
+        margin: 0 auto;
+        border: 2px solid var(--white);
+        }
+       .cartbutton {
+        display: inline-block;
+        background-color: var(--deeporange);
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        text-align: center;
+        transition: background-color 0.3s;
+        text-align: center; 
+        font-size: var(--size20);
+        font-weight: bold;
+        }
+          
+        .cartbutton:hover {
+            background-color: var(--deeporange);
+            color: #fff;
+
+      }
+
+/*---------------- FOOTER STYLE------------*/
+  
+  .footerBox{ 
+      grid-row: 4;
+      display: flex; 
+      background-color: var(--blue); 
+      padding: var(--size20); 
+      text-align: center; 
+      }
+
+      .copyright {
+    font-size: 14px;
+    color: var(--white); 
+    text-align: center; 
+    
+  }
+
+ 
+  /*-------------------------------------------------- REGISTER FORM STYLE---------------------------------------------------*/
+
+  .containerForm {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+  .formFields {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 50px;
+    padding: 10px;
+    border: 2px solid var(--darkorange);
+    border-radius: 5px;
+    box-sizing: border-box; /* Incluir el ancho del borde y el relleno en el ancho total */
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: var(--formsizeF);
+  }
+  
+  .formButton {
+    height: var(--size20);
+    padding: 10px 20px;
+    background-color: var(--darkorange);
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 700;
+    border: 2px solid var(--white);
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .formButton:hover {
+    background-color: var(--deeporange);
+  }
+
+  /*-------------------------------------------------- ABOUT STYLE---------------------------------------------------*/
+
+
+  .goals{
+    font-size:19px
+    
+  }
+  li{
+    text-align: left;
+    font-size: 16px;
+  }
+  .contactUs{
+    font-size:20px
+    
+  }
